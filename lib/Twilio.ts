@@ -18,7 +18,8 @@ export class Twilio {
     async send(sendParams: SendParams) {
         try {
             const response = await this._sendMessage(sendParams);
-            console.log(response)
+
+            return response
         } catch (e) {
             throw new Error(e)
         }
